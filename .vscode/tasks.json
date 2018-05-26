@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/thss-applex-build/thss-applex-build/thss-applex-build.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
