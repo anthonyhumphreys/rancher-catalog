@@ -16,6 +16,18 @@ services:
       - "9010:80"
     depends_on:
       - appLexBuildDb
+  web:
+    container_name: web
+    build:
+      context: ./thss-applex-build-frontend
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    ports:
+      - '9011:3000'
+    environment:
+      - NODE_ENV=development
   # authentication:
   #   image: "authentication"
   #   build: "./Services/authentication/thss-authentication-microservice"
