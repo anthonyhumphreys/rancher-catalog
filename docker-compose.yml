@@ -13,7 +13,7 @@ services:
     image: "build"
     build: "./thss-applex-build/thss-applex-build"
     ports:
-      - "9010:80"
+      - "4243:80"
     depends_on:
       - appLexBuildDb
   web:
