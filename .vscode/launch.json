@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/thss-applex-build/thss-applex-build/bin/Debug/netcoreapp2.0/thss-applex-build.dll",
+            "program": "${workspaceFolder}/thss-lexio-build/thss-lexio-build/bin/Debug/netcoreapp2.0/thss-lexio-build.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/thss-applex-build/thss-applex-build",
+            "cwd": "${workspaceFolder}/thss-lexio-build/thss-lexio-build",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
             "launchBrowser": {

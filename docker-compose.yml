@@ -1,9 +1,9 @@
 version: "3"
 services:
-  appLexBuildDb:
+  lexioBuildDb:
     image: "microsoft/mssql-server-linux"
     environment:
-        SA_PASSWORD: "AppLexDevBuild2018!"
+        SA_PASSWORD: "lexioDevBuild2018!"
         ACCEPT_EULA: "Y"
         ports:
             -"1433:1433"
@@ -11,23 +11,23 @@ services:
       - "1433:1433"
   build:
     image: "build"
-    build: "./thss-applex-build/thss-applex-build"
+    build: "./thss-lexio-build/thss-lexio-build"
     ports:
       - "4243:80"
     depends_on:
-      - appLexBuildDb
-  web:
-    container_name: web
-    build:
-      context: ./thss-applex-build-frontend
-      dockerfile: Dockerfile
-    volumes:
-      - '.:/usr/src/app'
-      - '/usr/src/app/node_modules'
-    ports:
-      - '9011:3000'
-    environment:
-      - NODE_ENV=development
+      - lexioBuildDb
+#  web:
+#    container_name: web
+#    build:
+#      context: ./thss-lexio-build-frontend
+#      dockerfile: Dockerfile
+#    volumes:
+#      - '.:/usr/src/app'
+#      - '/usr/src/app/node_modules'
+#    ports:
+#      - '9011:3000'
+#    environment:
+#      - NODE_ENV=development
   # authentication:
   #   image: "authentication"
   #   build: "./Services/authentication/thss-authentication-microservice"

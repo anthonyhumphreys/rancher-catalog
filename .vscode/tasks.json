@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/thss-applex-build/thss-applex-build/thss-applex-build.csproj"
+                "${workspaceFolder}/thss-lexio-build/thss-lexio-build/thss-lexio-build.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
