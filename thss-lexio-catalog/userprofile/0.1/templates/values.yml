@@ -1,0 +1,9 @@
+image:
+  repository: "lexio/userprofile"
+  tag: 0.0.1
+  pullPolicy: "always"
+service:
+  name: userprofile
+  type: NodePort
+  externalPort: 8181
+  internalPort: 8181
